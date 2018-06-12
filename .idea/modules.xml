@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BNO055Visualizer.iml" filepath="$PROJECT_DIR$/.idea/modules/BNO055Visualizer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BNO055Visualizer_main.iml" filepath="$PROJECT_DIR$/.idea/modules/BNO055Visualizer_main.iml" group="BNO055Visualizer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BNO055Visualizer_test.iml" filepath="$PROJECT_DIR$/.idea/modules/BNO055Visualizer_test.iml" group="BNO055Visualizer" />
+    </modules>
+  </component>
+</project>

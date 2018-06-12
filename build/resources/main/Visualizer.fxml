@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Box?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BNO055.Visualizer.VisualizerController">
+   <children>
+      <Box fx:id="Cube" depth="75.0" height="50.0" layoutX="300.0" layoutY="200.0" rotate="121.6" width="100.0">
+         <rotationAxis>
+            <Point3D x="0.1" y="0.1" />
+         </rotationAxis>
+      </Box>
+   </children>
+</AnchorPane>
