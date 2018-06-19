@@ -13,8 +13,9 @@ import edu.wpi.SimplePacketComs.phy.UDPSimplePacketComs;
 
 
 
-public class IMUData extends UDPSimplePacketComs{
+public class IMUData extends UDPSimplePacketComs {
     private PacketType IMU = new BytePacketType(1863, 64);
+    private final double[] status = new double[15];
 
     private final double[] data = new double[15];
 
@@ -23,6 +24,8 @@ public class IMUData extends UDPSimplePacketComs{
         addPollingPacket(IMU);
         addEvent(IMU.idOfCommand, () -> {
             readFloats(IMU.idOfCommand, getData());
+            //writeFloats(IMU.idOfCommand, getStatus());
+
         });
     }
     public static List<IMUData> get(String name) throws Exception {
@@ -44,7 +47,9 @@ public class IMUData extends UDPSimplePacketComs{
     public static List<IMUData> get() throws Exception {
         return get("*");
     }
-
+    public double[] getStatus() {
+        return status;
+    }
     public double[] getData() {
         return data;
     }

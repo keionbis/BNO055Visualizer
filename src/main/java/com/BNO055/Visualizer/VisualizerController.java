@@ -43,46 +43,24 @@ public class VisualizerController extends Application {
     }
     public void start(Stage stage) throws Exception {
         final PhongMaterial redMaterial = new PhongMaterial();
-
         redMaterial.setSpecularColor(Color.ORANGE);
         redMaterial.setDiffuseColor(Color.RED);
-
-        Slider slider2 = new Slider(00,180,90);
-        slider2.setLayoutX(50);
-        slider2.setLayoutY(230);
-        Slider slider = new Slider(00,6.28,3.14);
-        slider.setLayoutX(50);
-        slider.setLayoutY(330);
-        Slider slider3 = new Slider(00,6.28,3.14);
-        slider3.setLayoutX(50);
-        slider3.setLayoutY(430);
-        Slider slider4 = new Slider(00,6.28,3.14);
-        slider4.setLayoutX(50);
-        slider4.setLayoutY(530);
-
-
-
         Group root = new Group();
-
         stage.setScene(new Scene(root,1024,1080));
         Cube.setMaterial(redMaterial);
         Cube.setHeight(100);
         Cube.setDepth(75);
         Cube.setWidth(50);
         Cube.relocate(500,400);
-
         root.getChildren().add(Cube);
-
         stage.show();
     }
     public void setAngles(double elevation,double azamuth,double tilt){
-
-
         TransformNR newTrans = new TransformNR(0,0,0,new RotationNR(elevation,azamuth,tilt));
         TransformFactory.nrToAffine(newTrans ,affine);
-
     }
     public static void main(String[] args) throws IOException {
+
       launch(args);
     }
 
